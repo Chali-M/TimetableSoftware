@@ -34,10 +34,10 @@ namespace TimetableM
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.creset = new System.Windows.Forms.Label();
+            this.clogin = new System.Windows.Forms.Button();
+            this.cpassword = new System.Windows.Forms.TextBox();
+            this.cusername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -97,42 +97,44 @@ namespace TimetableM
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // label5
+            // creset
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("SimSun", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.Maroon;
-            this.label5.Location = new System.Drawing.Point(277, 389);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 15);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Reset";
+            this.creset.AutoSize = true;
+            this.creset.Font = new System.Drawing.Font("SimSun", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.creset.ForeColor = System.Drawing.Color.Maroon;
+            this.creset.Location = new System.Drawing.Point(277, 389);
+            this.creset.Name = "creset";
+            this.creset.Size = new System.Drawing.Size(47, 15);
+            this.creset.TabIndex = 15;
+            this.creset.Text = "Reset";
+            this.creset.Click += new System.EventHandler(this.label5_Click);
             // 
-            // button1
+            // clogin
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Font = new System.Drawing.Font("Showcard Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(237, 338);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 34);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = false;
+            this.clogin.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.clogin.Font = new System.Drawing.Font("Showcard Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.clogin.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.clogin.Location = new System.Drawing.Point(237, 338);
+            this.clogin.Name = "clogin";
+            this.clogin.Size = new System.Drawing.Size(130, 34);
+            this.clogin.TabIndex = 14;
+            this.clogin.Text = "Login";
+            this.clogin.UseVisualStyleBackColor = false;
+            this.clogin.Click += new System.EventHandler(this.clogin_Click);
             // 
-            // textBox2
+            // cpassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(237, 266);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(216, 23);
-            this.textBox2.TabIndex = 13;
+            this.cpassword.Location = new System.Drawing.Point(237, 266);
+            this.cpassword.Name = "cpassword";
+            this.cpassword.Size = new System.Drawing.Size(216, 23);
+            this.cpassword.TabIndex = 13;
             // 
-            // textBox1
+            // cusername
             // 
-            this.textBox1.Location = new System.Drawing.Point(237, 216);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(216, 23);
-            this.textBox1.TabIndex = 12;
+            this.cusername.Location = new System.Drawing.Point(237, 216);
+            this.cusername.Name = "cusername";
+            this.cusername.Size = new System.Drawing.Size(216, 23);
+            this.cusername.TabIndex = 12;
             // 
             // label2
             // 
@@ -163,10 +165,10 @@ namespace TimetableM
             this.ClientSize = new System.Drawing.Size(589, 439);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.creset);
+            this.Controls.Add(this.clogin);
+            this.Controls.Add(this.cpassword);
+            this.Controls.Add(this.cusername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -188,10 +190,10 @@ namespace TimetableM
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label creset;
+        private System.Windows.Forms.Button clogin;
+        private System.Windows.Forms.TextBox cpassword;
+        private System.Windows.Forms.TextBox cusername;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
     }

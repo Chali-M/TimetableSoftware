@@ -91,24 +91,7 @@ namespace TimetableM
         private void studentDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            tBox1.Text = studentDGV.SelectedRows[0].Cells[1].Value.ToString();
-            cBox1.Text = studentDGV.SelectedRows[0].Cells[2].Value.ToString();
-            tBox3.Text = studentDGV.SelectedRows[0].Cells[3].Value.ToString();
-            numericUpDown2.Text = studentDGV.SelectedRows[0].Cells[4].Value.ToString();
-            tBox5.Text = studentDGV.SelectedRows[0].Cells[5].Value.ToString();
-            tBox6.Text = studentDGV.SelectedRows[0].Cells[6].Value.ToString();
-
-
-
-
-            if (tBox1.Text == "")
-            {
-                sey = 0;
-            }
-            else
-            {
-                sey = Convert.ToInt32(studentDGV.SelectedRows[0].Cells[0].Value.ToString());
-            }
+           
         }
 
 
@@ -164,6 +147,28 @@ namespace TimetableM
                 {
                     MessageBox.Show(Ex.Message);
                 }
+            }
+        }
+
+        private void studentDGV_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            tBox1.Text = studentDGV.SelectedRows[0].Cells[1].Value.ToString();
+            cBox1.Text = studentDGV.SelectedRows[0].Cells[2].Value.ToString();
+            tBox3.Text = studentDGV.SelectedRows[0].Cells[3].Value.ToString();
+            numericUpDown2.Text = studentDGV.SelectedRows[0].Cells[4].Value.ToString();
+            tBox5.Text = studentDGV.SelectedRows[0].Cells[5].Value.ToString();
+            tBox6.Text = studentDGV.SelectedRows[0].Cells[6].Value.ToString();
+
+
+
+
+            if (tBox1.Text == "")
+            {
+                sey = 0;
+            }
+            else
+            {
+                sey = Convert.ToInt32(studentDGV.SelectedRows[0].Cells[0].Value.ToString());
             }
         }
     }

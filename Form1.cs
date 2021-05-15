@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TimetableM
@@ -17,5 +10,25 @@ namespace TimetableM
             InitializeComponent();
         }
 
+        private void label5_Click(object sender, EventArgs e)
+        {
+            cusername.Text = "";
+            cpassword.Text = "";
+        }
+
+        private void clogin_Click(object sender, EventArgs e)
+        {
+            string user, pass;
+            user = cusername.Text;
+            pass = cpassword.Text;
+            if(user == "admin" && pass == "admin")
+            {
+
+                MessageBox.Show("Successfull");
+            }else
+            {
+                MessageBox.Show("error");
+            }
+        }
     }
 }

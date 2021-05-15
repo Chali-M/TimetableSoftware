@@ -111,6 +111,7 @@ namespace TimetableM
             this.studentDGV.Size = new System.Drawing.Size(423, 163);
             this.studentDGV.TabIndex = 38;
             this.studentDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentDGV_CellContentClick);
+            this.studentDGV.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.studentDGV_MouseDoubleClick);
             // 
             // label17
             // 
