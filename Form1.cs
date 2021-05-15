@@ -27,7 +27,7 @@ namespace TimetableM
                 MessageBox.Show("Successfull");
             }else
             {
-                MessageBox.Show("error");
+                MessageBox.Show("REenter");
             }
         }
     }
