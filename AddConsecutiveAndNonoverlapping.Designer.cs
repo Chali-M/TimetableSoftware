@@ -66,6 +66,7 @@ namespace TimetableM
             this.cmcdelete.TabIndex = 34;
             this.cmcdelete.Text = "Delete";
             this.cmcdelete.UseVisualStyleBackColor = true;
+            this.cmcdelete.Click += new System.EventHandler(this.cmcdelete_Click);
             // 
             // cmcupdate
             // 
@@ -75,6 +76,7 @@ namespace TimetableM
             this.cmcupdate.TabIndex = 33;
             this.cmcupdate.Text = "Update";
             this.cmcupdate.UseVisualStyleBackColor = true;
+            this.cmcupdate.Click += new System.EventHandler(this.cmcupdate_Click);
             // 
             // cmctag2
             // 

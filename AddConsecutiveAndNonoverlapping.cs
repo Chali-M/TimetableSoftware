@@ -114,5 +114,55 @@ namespace TimetableM
                 Key = Convert.ToInt32(cmcDGV.SelectedRows[0].Cells[0].Value.ToString());
             }
         }
+
+        private void cmcdelete_Click(object sender, EventArgs e)
+        {
+
+            if (Key == 0)
+            {
+                MessageBox.Show("Select the session to be Deleted");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    SqlCommand cmd = new SqlCommand("delete from Conse where conId = " + Key + " ;", Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Session Deleted Successfully");
+                    Con.Close();
+                    populate3();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+
+        private void cmcupdate_Click(object sender, EventArgs e)
+        {
+            if (cmcln.Text == "" || cmcss.Text == "" || cmctag1.Text == "" || cmctag2.Text == "")
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                try
+                {
+                    String Query = "update Conse set lecturename = '" + cmcln.Text + "',selectsub ='" + cmcss.Text + "',addtagone='" + cmctag1.Text + "',addtagtwo='" + cmctag2.Text + "' where conId =" + Key + ";";
+                    Con.Open();
+                    SqlCommand cmd = new SqlCommand(Query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("session update Successfully");
+                    Con.Close();
+                    populate3();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
     }
 }
