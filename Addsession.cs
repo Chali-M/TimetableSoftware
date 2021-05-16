@@ -92,5 +92,33 @@ namespace TimetableM
         {
             reset();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Addtag obj = new Addtag();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            CreatStudent obj = new CreatStudent();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddConsecutiveAndNonoverlapping obj = new AddConsecutiveAndNonoverlapping();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AddConsecutiveAndNonoverlapping obj = new AddConsecutiveAndNonoverlapping();
+            obj.Show();
+            this.Hide();
+        }
     }
 }

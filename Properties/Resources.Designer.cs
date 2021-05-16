@@ -113,6 +113,26 @@ namespace TimetableM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap face_people_man_logo_and_symbols_icons_vector_19114568 {
+            get {
+                object obj = ResourceManager.GetObject("face-people-man-logo-and-symbols-icons-vector-19114568", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap face_people_man_logo_and_symbols_icons_vector_191145681 {
+            get {
+                object obj = ResourceManager.GetObject("face-people-man-logo-and-symbols-icons-vector-191145681", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gettyimages_467587412_612x612 {
             get {
                 object obj = ResourceManager.GetObject("gettyimages-467587412-612x612", resourceCulture);

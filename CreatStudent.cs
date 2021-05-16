@@ -171,5 +171,19 @@ namespace TimetableM
                 sey = Convert.ToInt32(studentDGV.SelectedRows[0].Cells[0].Value.ToString());
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Addtag obj = new Addtag();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void subjects2_Click(object sender, EventArgs e)
+        {
+            Addsession obj = new Addsession();
+            obj.Show();
+            this.Hide();
+        }
     }
 }

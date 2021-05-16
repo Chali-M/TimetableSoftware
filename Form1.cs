@@ -25,10 +25,19 @@ namespace TimetableM
             {
 
                 MessageBox.Show("Successfull");
+
+                Addtag obj = new Addtag();
+                obj.Show();
+                this.Hide();
             }else
             {
                 MessageBox.Show("REenter");
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -121,5 +121,24 @@ namespace TimetableM
                 }
             }
         }
+
+        private void Addtag_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CreatStudent obj = new CreatStudent();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void subjects2_Click(object sender, EventArgs e)
+        {
+            Addsession obj = new Addsession();
+            obj.Show();
+            this.Hide();
+        }
     }
 }
