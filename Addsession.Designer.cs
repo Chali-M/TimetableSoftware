@@ -30,19 +30,15 @@ namespace TimetableM
         private void InitializeComponent()
         {
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.cnsub2 = new System.Windows.Forms.ComboBox();
+            this.cnsub1 = new System.Windows.Forms.ComboBox();
+            this.cninsert = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.ccclear = new System.Windows.Forms.Button();
             this.ccadd = new System.Windows.Forms.Button();
-            this.cctag2 = new System.Windows.Forms.TextBox();
-            this.ccsubject = new System.Windows.Forms.TextBox();
-            this.cctag1 = new System.Windows.Forms.TextBox();
-            this.ccln = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -54,6 +50,10 @@ namespace TimetableM
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.cat2 = new System.Windows.Forms.ComboBox();
+            this.cat1 = new System.Windows.Forms.ComboBox();
+            this.cssub = new System.Windows.Forms.ComboBox();
+            this.cln = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.tabControlc = new System.Windows.Forms.TabControl();
             this.tabPage4.SuspendLayout();
@@ -66,9 +66,9 @@ namespace TimetableM
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.button3);
-            this.tabPage4.Controls.Add(this.textBox8);
-            this.tabPage4.Controls.Add(this.textBox9);
+            this.tabPage4.Controls.Add(this.cnsub2);
+            this.tabPage4.Controls.Add(this.cnsub1);
+            this.tabPage4.Controls.Add(this.cninsert);
             this.tabPage4.Controls.Add(this.label14);
             this.tabPage4.Controls.Add(this.label15);
             this.tabPage4.Controls.Add(this.label16);
@@ -80,30 +80,37 @@ namespace TimetableM
             this.tabPage4.Text = "Non overlapping";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // cnsub2
             // 
-            this.button3.Location = new System.Drawing.Point(502, 246);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Insert";
-            this.button3.UseVisualStyleBackColor = true;
+            this.cnsub2.FormattingEnabled = true;
+            this.cnsub2.Items.AddRange(new object[] {
+            "anu",
+            "pirimi"});
+            this.cnsub2.Location = new System.Drawing.Point(456, 162);
+            this.cnsub2.Name = "cnsub2";
+            this.cnsub2.Size = new System.Drawing.Size(214, 23);
+            this.cnsub2.TabIndex = 14;
             // 
-            // textBox8
+            // cnsub1
             // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox8.Location = new System.Drawing.Point(420, 111);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(218, 23);
-            this.textBox8.TabIndex = 11;
+            this.cnsub1.FormattingEnabled = true;
+            this.cnsub1.Items.AddRange(new object[] {
+            "*gyry",
+            "gy"});
+            this.cnsub1.Location = new System.Drawing.Point(456, 113);
+            this.cnsub1.Name = "cnsub1";
+            this.cnsub1.Size = new System.Drawing.Size(214, 23);
+            this.cnsub1.TabIndex = 13;
             // 
-            // textBox9
+            // cninsert
             // 
-            this.textBox9.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox9.Location = new System.Drawing.Point(420, 159);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(218, 23);
-            this.textBox9.TabIndex = 10;
+            this.cninsert.Location = new System.Drawing.Point(529, 244);
+            this.cninsert.Name = "cninsert";
+            this.cninsert.Size = new System.Drawing.Size(75, 23);
+            this.cninsert.TabIndex = 12;
+            this.cninsert.Text = "Insert";
+            this.cninsert.UseVisualStyleBackColor = true;
+            this.cninsert.Click += new System.EventHandler(this.cninsert_Click);
             // 
             // label14
             // 
@@ -137,6 +144,7 @@ namespace TimetableM
             // 
             // pictureBox5
             // 
+            this.pictureBox5.Image = global::TimetableM.Properties.Resources.ef4953de1f9e4c7754ed06f4313818e2;
             this.pictureBox5.Location = new System.Drawing.Point(120, 41);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(113, 396);
@@ -153,6 +161,7 @@ namespace TimetableM
             this.ccclear.TabIndex = 27;
             this.ccclear.Text = "Clear";
             this.ccclear.UseVisualStyleBackColor = true;
+            this.ccclear.Click += new System.EventHandler(this.ccclear_Click);
             // 
             // ccadd
             // 
@@ -163,46 +172,14 @@ namespace TimetableM
             this.ccadd.TabIndex = 26;
             this.ccadd.Text = "Insert";
             this.ccadd.UseVisualStyleBackColor = true;
-            // 
-            // cctag2
-            // 
-            this.cctag2.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.cctag2.Location = new System.Drawing.Point(485, 241);
-            this.cctag2.Name = "cctag2";
-            this.cctag2.Size = new System.Drawing.Size(218, 25);
-            this.cctag2.TabIndex = 25;
-            // 
-            // ccsubject
-            // 
-            this.ccsubject.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ccsubject.Location = new System.Drawing.Point(485, 128);
-            this.ccsubject.Name = "ccsubject";
-            this.ccsubject.Size = new System.Drawing.Size(218, 25);
-            this.ccsubject.TabIndex = 24;
-            // 
-            // cctag1
-            // 
-            this.cctag1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.cctag1.Location = new System.Drawing.Point(485, 185);
-            this.cctag1.Name = "cctag1";
-            this.cctag1.Size = new System.Drawing.Size(218, 25);
-            this.cctag1.TabIndex = 23;
-            // 
-            // ccln
-            // 
-            this.ccln.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ccln.Location = new System.Drawing.Point(485, 70);
-            this.ccln.Name = "ccln";
-            this.ccln.Size = new System.Drawing.Size(218, 25);
-            this.ccln.TabIndex = 22;
-            this.ccln.Text = " ";
+            this.ccadd.Click += new System.EventHandler(this.ccadd_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label7.Location = new System.Drawing.Point(337, 250);
+            this.label7.Location = new System.Drawing.Point(337, 248);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 16);
             this.label7.TabIndex = 21;
@@ -265,6 +242,7 @@ namespace TimetableM
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Image = global::TimetableM.Properties.Resources._62_623071_teacher_woman_cartoon_transparent_background_teacher_clipart_hd;
             this.pictureBox3.Location = new System.Drawing.Point(208, 199);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(75, 173);
@@ -274,6 +252,7 @@ namespace TimetableM
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Image = global::TimetableM.Properties.Resources.gettyimages_467587412_612x612;
             this.pictureBox4.Location = new System.Drawing.Point(32, 76);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(264, 152);
@@ -286,7 +265,7 @@ namespace TimetableM
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(746, 462);
+            this.tabPage1.Size = new System.Drawing.Size(772, 466);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Add session";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -296,19 +275,19 @@ namespace TimetableM
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(746, 462);
+            this.tabPage2.Size = new System.Drawing.Size(772, 466);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Manage sesion";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.cat2);
+            this.tabPage3.Controls.Add(this.cat1);
+            this.tabPage3.Controls.Add(this.cssub);
+            this.tabPage3.Controls.Add(this.cln);
             this.tabPage3.Controls.Add(this.ccclear);
             this.tabPage3.Controls.Add(this.ccadd);
-            this.tabPage3.Controls.Add(this.cctag2);
-            this.tabPage3.Controls.Add(this.ccsubject);
-            this.tabPage3.Controls.Add(this.cctag1);
-            this.tabPage3.Controls.Add(this.ccln);
             this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.label8);
             this.tabPage3.Controls.Add(this.label9);
@@ -326,6 +305,53 @@ namespace TimetableM
             this.tabPage3.Text = "Consecutive";
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // cat2
+            // 
+            this.cat2.FormattingEnabled = true;
+            this.cat2.Items.AddRange(new object[] {
+            "Lecture",
+            "Tutorial",
+            "Practical"});
+            this.cat2.Location = new System.Drawing.Point(485, 238);
+            this.cat2.Name = "cat2";
+            this.cat2.Size = new System.Drawing.Size(218, 25);
+            this.cat2.TabIndex = 31;
+            // 
+            // cat1
+            // 
+            this.cat1.FormattingEnabled = true;
+            this.cat1.Items.AddRange(new object[] {
+            "Lecture",
+            "Tutorial",
+            "Practical"});
+            this.cat1.Location = new System.Drawing.Point(485, 190);
+            this.cat1.Name = "cat1";
+            this.cat1.Size = new System.Drawing.Size(218, 25);
+            this.cat1.TabIndex = 30;
+            // 
+            // cssub
+            // 
+            this.cssub.FormattingEnabled = true;
+            this.cssub.Items.AddRange(new object[] {
+            "g",
+            "b",
+            "g"});
+            this.cssub.Location = new System.Drawing.Point(485, 124);
+            this.cssub.Name = "cssub";
+            this.cssub.Size = new System.Drawing.Size(218, 25);
+            this.cssub.TabIndex = 29;
+            // 
+            // cln
+            // 
+            this.cln.FormattingEnabled = true;
+            this.cln.Items.AddRange(new object[] {
+            "t",
+            "h"});
+            this.cln.Location = new System.Drawing.Point(485, 76);
+            this.cln.Name = "cln";
+            this.cln.Size = new System.Drawing.Size(218, 25);
+            this.cln.TabIndex = 28;
             // 
             // label13
             // 
@@ -373,19 +399,13 @@ namespace TimetableM
         #endregion
 
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Button cninsert;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button ccclear;
         private System.Windows.Forms.Button ccadd;
-        private System.Windows.Forms.TextBox cctag2;
-        private System.Windows.Forms.TextBox ccsubject;
-        private System.Windows.Forms.TextBox cctag1;
-        private System.Windows.Forms.TextBox ccln;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -399,5 +419,11 @@ namespace TimetableM
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TabControl tabControlc;
+        private System.Windows.Forms.ComboBox cnsub2;
+        private System.Windows.Forms.ComboBox cnsub1;
+        private System.Windows.Forms.ComboBox cssub;
+        private System.Windows.Forms.ComboBox cln;
+        private System.Windows.Forms.ComboBox cat2;
+        private System.Windows.Forms.ComboBox cat1;
     }
 }

@@ -118,16 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="javier-trueba-iQPr1XkF5F0-unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\javier-trueba-iQPr1XkF5F0-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="468d6c36da265b4cf4e7836dd057adeb" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\468d6c36da265b4cf4e7836dd057adeb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="492_562426_operations.hero" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\492_562426_operations.hero.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="APOSI-800x480_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\APOSI-800x480_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="62-623071_teacher-woman-cartoon-transparent-background-teacher-clipart-hd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\62-623071_teacher-woman-cartoon-transparent-background-teacher-clipart-hd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="javier-trueba-iQPr1XkF5F0-unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\javier-trueba-iQPr1XkF5F0-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gettyimages-467587412-612x612" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gettyimages-467587412-612x612.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="468d6c36da265b4cf4e7836dd057adeb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\468d6c36da265b4cf4e7836dd057adeb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ef4953de1f9e4c7754ed06f4313818e2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ef4953de1f9e4c7754ed06f4313818e2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

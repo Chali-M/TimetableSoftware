@@ -83,9 +83,39 @@ namespace TimetableM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _62_623071_teacher_woman_cartoon_transparent_background_teacher_clipart_hd {
+            get {
+                object obj = ResourceManager.GetObject("62-623071_teacher-woman-cartoon-transparent-background-teacher-clipart-hd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap APOSI_800x480_1 {
             get {
                 object obj = ResourceManager.GetObject("APOSI-800x480_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ef4953de1f9e4c7754ed06f4313818e2 {
+            get {
+                object obj = ResourceManager.GetObject("ef4953de1f9e4c7754ed06f4313818e2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gettyimages_467587412_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("gettyimages-467587412-612x612", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
