@@ -211,7 +211,7 @@ namespace NewProjectWin
             else
             {
                 key = Convert.ToInt32(DataGV3.SelectedRows[0].Cells[0].Value.ToString());
-            }
+            } 
         }
 
         private void LocationBTN_Click(object sender, EventArgs e)

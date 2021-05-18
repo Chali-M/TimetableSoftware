@@ -16,10 +16,63 @@ namespace NewProjectWin
         {
             InitializeComponent();
             populate();
+            fillcombobox();
+            fillcombobox1();
         }
 
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\94774\Documents\WorkingDayManage.mdf;Integrated Security=True;Connect Timeout=30");
 
+        public void fillcombobox()
+        {
+            string sql = "select * from LECTURERTB";
+            SqlCommand cmd = new SqlCommand(sql, Con);
+            SqlDataReader myreader;
+            try
+            {
+                Con.Open();
+                myreader = cmd.ExecuteReader();
+                while (myreader.Read())
+                {
+                    string sname = myreader.GetString(1);
+                    selLec.Items.Add(sname);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            Con.Close();
+        }
+
+        public void fillcombobox1()
+        {
+            string sql = "select * from STUDENTTT";
+            SqlCommand cmd = new SqlCommand(sql, Con);
+            SqlDataReader myreader;
+            try
+            {
+                Con.Open();
+                myreader = cmd.ExecuteReader();
+                while (myreader.Read())
+                
+                {
+                    string gname = myreader.GetString(3);
+                    selGrp.Items.Add(gname);
+
+                    string Subname = myreader.GetString(4);
+                    selSGrp.Items.Add(Subname);
+                }
+               
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            Con.Close();
+        }
         private void populate()
         {
             Con.Open();
@@ -43,7 +96,7 @@ namespace NewProjectWin
                 try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into LOCATIONTBL values('" + selLec.SelectedItem.ToString() + "','" + selGrp.SelectedItem.ToString() + "','" + selSGrp.SelectedItem.ToString() + "','" + selSID.SelectedItem.ToString() + "','" + timeDu.Text + "','" + selRoom.SelectedItem.ToString() + "','" + selDay.SelectedItem.ToString() + "','" + sTime.Text + "','" + eTime.Text + "')", Con);
+                    SqlCommand cmd = new SqlCommand("insert into LOCATIONTBL values('" + selLec.SelectedItem.ToString() + "','" + selGrp.SelectedItem.ToString() + "','" + selSGrp.SelectedItem.ToString() + "','" + selSID.SelectedItem.ToString() + "','" + timeDu.Text + "')", Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Details Added Successfully");
                     Con.Close();
@@ -67,10 +120,7 @@ namespace NewProjectWin
             selSGrp.Text = "";
             selSID.Text = "";
             timeDu.Text = "";
-            selRoom.Text = "";
-            selDay.Text = "";
-            sTime.Text = "";
-            eTime.Text = "";
+           
 
             key = 0;
         }
@@ -83,7 +133,40 @@ namespace NewProjectWin
         private void btnUpdateSub_Click(object sender, EventArgs e)
         {
 
-            if (VselLec.Text == "" || VselGrp.Text == "" || VselSGrp.Text == "" || VselSID.Text == "" || VtimeDu.Text == "" )
+         
+        }
+
+        private void btnDeleteSub_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+           
+            VtimeDu.Text = dataGV4.SelectedRows[0].Cells[5].Value.ToString();
+            
+
+            if (VtimeDu.Text == "")
+            {
+                key = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(dataGV4.SelectedRows[0].Cells[0].Value.ToString());
+            }
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdateSub_Click_1(object sender, EventArgs e)
+        {
+
+            if ( VtimeDu.Text == "")
             {
                 MessageBox.Show("Missing Information");
             }
@@ -91,7 +174,7 @@ namespace NewProjectWin
             {
                 try
                 {
-                    string Query = "Update LOCATIONTBL set selLec ='" + VselLec.Text + "',selGrp='" + VselGrp.Text + "',selSGrp='" + VselSGrp.Text + "',selSesID='" + VselSID.Text + "',timeDue='" + VtimeDu.Text + "',selRoom='" + VselRoom.Text + "',selDay='" +VselDay.Text + "',startTime='" + VsTime.Text + "',endTime='" + VeTime.Text + "'where lecID='" + key + "';";
+                    string Query = "Update LOCATIONTBL set timeDue='" + VtimeDu.Text +  "'where lecID='" + key + "';";
                     Con.Open();
                     SqlCommand cmd = new SqlCommand(Query, Con);
                     cmd.ExecuteNonQuery();
@@ -107,7 +190,7 @@ namespace NewProjectWin
             }
         }
 
-        private void btnDeleteSub_Click(object sender, EventArgs e)
+        private void btnDeleteSub_Click_1(object sender, EventArgs e)
         {
             if (key == 0)
             {
@@ -133,30 +216,23 @@ namespace NewProjectWin
             }
         }
 
-        private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void addLocBTN_Click(object sender, EventArgs e)
         {
-
-            VselLec.Text = dataGV4.SelectedRows[0].Cells[1].Value.ToString();
-            VselGrp.Text = dataGV4.SelectedRows[0].Cells[2].Value.ToString();
-            VselSGrp.Text = dataGV4.SelectedRows[0].Cells[3].Value.ToString();
-            VselSID.Text = dataGV4.SelectedRows[0].Cells[4].Value.ToString();
-            VtimeDu.Text = dataGV4.SelectedRows[0].Cells[5].Value.ToString();
-            VselRoom.Text = dataGV4.SelectedRows[0].Cells[6].Value.ToString();
-            VselDay.Text = dataGV4.SelectedRows[0].Cells[7].Value.ToString();
-            VsTime.Text = dataGV4.SelectedRows[0].Cells[8].Value.ToString();
-            VeTime.Text = dataGV4.SelectedRows[0].Cells[9].Value.ToString();
-
-            if (VselLec.Text == "")
-            {
-                key = 0;
-            }
-            else
-            {
-                key = Convert.ToInt32(dataGV4.SelectedRows[0].Cells[0].Value.ToString());
-            }
+            var newform = new Form3();
+            newform.Show();
         }
 
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        private void selGrp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LdataGV_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
